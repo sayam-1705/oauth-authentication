@@ -10,11 +10,11 @@ const LoginButton = () => {
       {session ? (
         <>
           <p className="text-lg font-semibold">Welcome, {session.user?.name}</p>
-          <img
-            src={session.user?.image ?? ""}
-            alt="Profile Picture"
-            className="w-16 h-16 rounded-full"
-          />
+
+          <div className="text-5xl font-semibold bg-blue-500 text-white h-15 w-15 text-center justify-center rounded-full">
+            {session.user?.name?.charAt(0).toUpperCase()}
+          </div>
+
           <button
             onClick={() => signOut()}
             className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
